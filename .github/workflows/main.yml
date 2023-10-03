@@ -11,7 +11,7 @@ jobs:
     steps: 
       - name: Testing Secrets
         run: | 
-             if[ "$DEVOPS" == "DevOpsHint123" ]
+             if[ "$DEVOPS" == "123" ]
              then
                 echo "Got your secret"
               fi
