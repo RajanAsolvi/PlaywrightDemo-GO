@@ -28,14 +28,12 @@ jobs:
 
       - name: Getting User Credentials secrets
         env: 
-           USERNAME1:   ${{secrets.USERNAME_SECRET}}
-           PASSWORD1:   ${{secrets.PASSWORD}}
-           USERNAME:   ${{vars.USERNAME}}
-           PASSWORD:   ${{vars.PASSWORD}}
+           UNAME:   ${{vars.USERNAME}}
+           PASSORD:   ${{vars.PASSWORD}}
 
         run: | 
-            echo "$USERNAME"
-            echo "$PASSWORD"
+            echo "$UNAME"
+            echo "$PASSORD"
 
       - name: Run tests
         run: $env:USERNAME=${{vars.USERNAME}};$env:PASSWORD=${{vars.PASSWORD}};npx playwright test goLangPoc --workers 1 --project chromium --heade
