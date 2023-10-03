@@ -11,10 +11,8 @@ jobs:
     steps: 
       - name: Testing Secrets
         run: | 
-             if[ "$DEVOPS" == "123" ]
-             then
-                echo "Got your secret"
-              fi
+          echo "$DEVOPS"
+            
         env: 
             DEVOPS:   ${{secrets.SECRETS_TOKEN}}
             
