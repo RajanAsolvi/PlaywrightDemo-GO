@@ -8,14 +8,13 @@ on:
 jobs:
   default-env-variables: 
     runs-on: ubuntu-latest  #windows-latest
-    
     steps: 
       - name: Testing Secrets
         run: | 
-            if[ "$DEVOPS" ==  "Test@non"  ]
-            then
+          if  [ "$DEVOPS" ==  "Test@non"  ]
+          then
               echo "Got our secret"
-            fi
+          fi
         env: 
             DEVOPS:   ${{secrets.SECRETS_TOKEN}}
             
