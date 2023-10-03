@@ -7,10 +7,8 @@ on:
 
 jobs:
   default-env-variables: 
-    name: env variables
-
     runs-on: windows-latest  #ubuntu-latest
-
+    
     steps: 
       - name: Testing Secrets
         run: | 
