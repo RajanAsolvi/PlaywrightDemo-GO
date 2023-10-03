@@ -11,7 +11,9 @@ jobs:
     steps: 
       - name: Testing Secrets                   
         env: 
-            DEVOPS:   ${{secrets.SECRETS_TOKEN}}
+            USERNAME:   ${{secrets.USERNAME_SECRET}}
+            PASSWORD:   ${{secrets.PASSWORD}} 
         run: | 
-            echo "$DEVOPS"
+            echo "$USERNAME"
+            echo "$PASSWORD"
             
