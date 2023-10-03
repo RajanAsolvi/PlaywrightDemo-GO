@@ -31,7 +31,7 @@ test('quidlo web tests', async ({ page }) => {
   await page.getByRole('link', { name: 'Check out all features' }).click();
   await page.waitForTimeout(3000)
   await page.locator('input[name="email"]').click();
-  await page.locator('input[name="email"]').fill(process.env.USERNAME1);
+  await page.locator('input[name="email"]').fill(process.env.USERNAME);
   await page.locator('input[name="email"]').press('Tab');
   await page.locator('input[name="password"]').fill(process.env.PASSWORD);
   await page.waitForTimeout(3000)

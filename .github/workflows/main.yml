@@ -1,0 +1,20 @@
+name: Default env vairables
+on: 
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  default-env-variables: 
+    name: env variables
+
+    runs-on: windows-latest  #ubuntu-latest
+
+    steps: 
+      - name: Testing Secrets
+        run: | 
+            echo "$DEVOPS"
+        env: 
+            DEVOPS:   ${{secrets.SECRETS_TOKEN}}
+            
