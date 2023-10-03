@@ -28,15 +28,17 @@ jobs:
 
       - name: Getting User Credentials secrets
         env: 
-           USERNAME:   ${{secrets.USERNAME_SECRET}}
-           PASSWORD:   ${{secrets.PASSWORD}} 
+           USERNAME1:   ${{secrets.USERNAME_SECRET}}
+           PASSWORD1:   ${{secrets.PASSWORD}}
+           USERNAME:   ${{vars.USERNAME}}
+           PASSWORD:   ${{vars.PASSWORD}}
+
         run: | 
             echo "$USERNAME"
             echo "$PASSWORD"
 
       - name: Run tests
-        run: $env:USERNAME=${{secrets.USERNAME_SECRET}};$env:PASSWORD=${{secrets.PASSWORD}};npx playwright test goLangPoc --workers 1 --project chromium --headed
-
+        run: $env:USERNAME=${{vars.USERNAME}};$env:PASSWORD=${{vars.PASSWORD}};npx playwright test goLangPoc --workers 1 --project chromium --heade
       - uses: actions/upload-artifact@v3
         if: always()
         with:
