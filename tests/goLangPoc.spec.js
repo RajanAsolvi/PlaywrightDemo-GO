@@ -16,12 +16,12 @@ const { test, expect } = require('@playwright/test');
 });*/
 
 test('quidlo web tests', async ({ page }) => {
-  const baseUrl = process.env.BASE_URL;
-  const userName = process.env.USERNAME1;
-  const password = process.env.PASSWORD;
+  //const baseUrl = process.env.BASE_URL;
+  //const userName = process.env.USERNAME1;
+  //const password = process.env.PASSWORD;
 
-  //await page.goto('https://www.quidlo.com/timesheets/');
-  await page.goto(baseUrl);
+  await page.goto('https://www.quidlo.com/timesheets/');
+  //await page.goto(baseUrl);
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/FREE Online Timesheets for Employees/);
@@ -31,9 +31,9 @@ test('quidlo web tests', async ({ page }) => {
   await page.getByRole('link', { name: 'Check out all features' }).click();
   await page.waitForTimeout(3000)
   await page.locator('input[name="email"]').click();
-  await page.locator('input[name="email"]').fill(userName);
+  await page.locator('input[name="email"]').fill(process.env.USERNAME1);
   await page.locator('input[name="email"]').press('Tab');
-  await page.locator('input[name="password"]').fill(password);
+  await page.locator('input[name="password"]').fill(process.env.PASSWORD);
   await page.waitForTimeout(3000)
   await page.pause();
 });
