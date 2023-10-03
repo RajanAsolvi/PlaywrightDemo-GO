@@ -12,7 +12,6 @@ jobs:
     steps: 
       - name: Testing Secrets
         run: | 
-            echo "$DEVOPS"
             if[ "$DEVOPS" ==  "Test@non"  ]
             then
               echo "Got our secret"
