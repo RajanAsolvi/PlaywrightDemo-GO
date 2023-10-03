@@ -35,7 +35,7 @@ jobs:
             echo "$PASSWORD"
 
       - name: Run tests
-        run: $env:USERNAME='test';$env:PASSWORD='secret';npx playwright test goLangPoc --workers 1 --project chromium --headed
+        run: $env:USERNAME=${{secrets.USERNAME_SECRET}};$env:PASSWORD=${{secrets.PASSWORD}};npx playwright test goLangPoc --workers 1 --project chromium --headed
 
       - uses: actions/upload-artifact@v3
         if: always()
