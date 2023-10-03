@@ -11,10 +11,7 @@ jobs:
     steps: 
       - name: Testing Secrets
         run: | 
-          if  [ "$DEVOPS" ==  "Test@non"  ]
-          then
-              echo "Got our secret"
-          fi
+             echo "$DEVOPS"
         env: 
             DEVOPS:   ${{secrets.SECRETS_TOKEN}}
             
