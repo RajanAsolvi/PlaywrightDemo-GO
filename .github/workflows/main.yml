@@ -26,8 +26,16 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
+      - name: Getting User Credentials secrets
+        env: 
+           USERNAME:   ${{secrets.USERNAME_SECRET}}
+           PASSWORD:   ${{secrets.PASSWORD}} 
+        run: | 
+            echo "$USERNAME"
+            echo "$PASSWORD"
+
       - name: Run tests
-        run: set USERNAME=Test&&PASSWORD=test2&&npx playwright test goLangPoc --workers 1 --project chromium --headed
+        run: $env:USERNAME='test';$env:PASSWORD='secret';npx playwright test goLangPoc --workers 1 --project chromium --headed
 
       - uses: actions/upload-artifact@v3
         if: always()
