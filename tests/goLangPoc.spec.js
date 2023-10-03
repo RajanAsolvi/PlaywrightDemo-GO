@@ -35,7 +35,7 @@ test('quidlo web tests', async ({ page }) => {
   await page.locator('input[name="email"]').press('Tab');
   await page.locator('input[name="password"]').fill(process.env.PASSWORD);
   await page.waitForTimeout(3000)
-  await page.pause();
+  //await page.pause();
 });
 
 
