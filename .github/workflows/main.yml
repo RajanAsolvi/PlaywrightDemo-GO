@@ -9,7 +9,7 @@ jobs:
   e2e-tests: 
     name: run-poc-test
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest  #ubuntu-latest
 
     steps: 
       - name: CheckOut
@@ -24,9 +24,6 @@ jobs:
         run: npm install
 
       - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
-
-      - name: Getting User Credentials secrets
         run: npx playwright install --with-deps
 
       - name: Run tests
