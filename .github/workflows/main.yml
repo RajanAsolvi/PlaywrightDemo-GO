@@ -9,10 +9,9 @@ jobs:
   default-env-variables: 
     runs-on: ubuntu-latest  #windows-latest
     steps: 
-      - name: Testing Secrets
-        run: | 
-          echo "$DEVOPS"
-            
+      - name: Testing Secrets                   
         env: 
             DEVOPS:   ${{secrets.SECRETS_TOKEN}}
+        run: | 
+            echo "$DEVOPS"
             
