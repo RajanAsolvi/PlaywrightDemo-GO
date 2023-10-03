@@ -12,7 +12,7 @@ jobs:
       - name: Testing Secrets
         run: | 
              echo "$DEVOPS"
-             if[ "$DEVOPS" == "Test" ]
+             if[ "$DEVOPS" == "DevOpsHint" ]
              then
                 echo "Got your secret"
               fi
