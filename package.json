@@ -1,5 +1,5 @@
 {
-  "name": "playwrightdemo-go",
+  "name": "evaticautomation",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,8 +8,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.38.1",
-    "@types/node": "^20.6.3",
-    "dotenv": "^16.3.1"
+    "@playwright/test": "^1.31.1",
+    "allure-commandline": "^2.27.0",
+    "allure-playwright": "^2.15.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "read-excel-file": "^5.6.1",
+    "xlsx": "^0.18.5"
   }
 }
