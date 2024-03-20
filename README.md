@@ -24,14 +24,14 @@
 
 ##Playwright.Config.Ts - This is an very important file that contains all the config set up needed for running the playwright tests.Playwright tests wont run without this config file. The place where the test results needed to be stored, format of test results, serial or parallel execution of Test cases, Screenshots attachement needed, video needed, which mobile browsers or Desktop browsers etc can be configured inside this file
 
-###### Pre-Requisites for running this Repo
-## Make sure that all the folders are present in this Repo with the updated data
-## Make sure the user who is going to run the Tests has got the Write/Admin access. Please check with the Admin or check in the settings section of this repo
-## Make sure the updated code is present in this repo. Admin of this repo should confirm this before running this tests.
-## Make sure the user who is going to run the repo have access to 'Actions' tab in this repo.
-## Once the pre-requisites are done,navigate to the Actions tab->Regression->Workflow->Main->Click the Main workflow
-## Once the workFlow is completed,check the results from the Summary section.
-## Results will be present in the Repo for the 14 days(as per company guidelines)
+### Pre-Requisites for running this Repo
+##Make sure that all the folders are present in this Repo with the updated data
+##Make sure the user who is going to run the Tests has got the Write/Admin access. Please check with the Admin or check in the settings section of this repo
+##Make sure the updated code is present in this repo. Admin of this repo should confirm this before running this tests.
+##Make sure the user who is going to run the repo have access to 'Actions' tab in this repo.
+##Once the pre-requisites are done,navigate to the Actions tab->Regression->Workflow->Main->Click the Main workflow
+##Once the workFlow is completed,check the results from the Summary section.
+##Results will be present in the Repo for the 14 days(as per company guidelines)
 
 
 
