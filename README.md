@@ -39,6 +39,11 @@
 
 ##Results will be present in the Repo for the 14 days(as per company guidelines)
 
+Useful links
+React documentation
+The library used for displaying maps: Leaflet
+The library used to display graphs: Chart.js
+
 
 
 
